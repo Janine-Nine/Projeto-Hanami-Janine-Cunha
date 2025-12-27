@@ -1,0 +1,71 @@
+/* =========================
+   ASSETS / STYLE.CSS
+   Interações e refinamentos
+   ========================= */
+
+/* Upload */
+#fileInput {
+  margin-bottom: 12px;
+}
+
+#uploadStatus {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Botões */
+button:active {
+  transform: scale(0.97);
+}
+
+/* KPIs animação */
+.kpi {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kpi:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Cards efeito */
+.card {
+  transition: box-shadow 0.25s ease;
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* Barra de progresso ativa */
+#progressBar.active {
+  animation: progressPulse 1.2s infinite ease-in-out;
+}
+
+@keyframes progressPulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* Insights */
+#insightsList li::before {
+  content: "✔ ";
+  color: var(--success);
+  font-weight: bold;
+}
+
+/* API status */
+.api-online {
+  color: var(--success);
+}
+
+.api-offline {
+  color: var(--danger);
+}
+
+/* Log */
+#systemLog {
+  max-height: 180px;
+}
